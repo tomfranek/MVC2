@@ -1,0 +1,150 @@
+h2 {
+  vertical-align: center;
+  
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #111;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+footer {
+	font-size: 11px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+article {
+	text-shadow: 3px 3px 3px #aaaaaa;
+}
+
+h1 {
+	text-align: center;
+	color: #EE2525;
+	text-shadow: 3px 3px 3px #aaaaaa;
+}
+
+
+.toplista {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00BAF0;
+   background: linear-gradient(to left,#0000AA , #000BFF);
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+ text-decoration: none;
+  color: #fff;  padding: 1rem;
+
+}
+
+
+
+
+
+.menuhamburger {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menuprepinac {
+  display: none;
+}
+
+.menutlacitko,
+.menutlacitko::before,
+.menutlacitko::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  transition: transform 1000ms cubic-bezier(0.1, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menutlacitko::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menutlacitko::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menuprepinac:checked + .menuhamburger .menutlacitko::before {
+  margin-top: 0px;
+  transform: rotate(1305deg);
+}
+
+#menuprepinac:checked + .menuhamburger .menutlacitko {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menuprepinac:checked + .menuhamburger .menutlacitko::after {
+  margin-top: 0px;
+  transform: rotate(-1305deg);
+}
+
+@media (max-width: 700px) {
+  .menuhamburger {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menuprepinac ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menuprepinac:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+}

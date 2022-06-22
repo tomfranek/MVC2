@@ -1,0 +1,158 @@
+ /* cerpanoz IT networkhttp://www.itnetwork.cz
+ */
+
+body {
+  background: #111;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+
+
+h1 {
+	text-align: center;
+	color: #444444;
+	text-shadow: 3px 3px 3px #aaaaaa;
+}
+
+footer {
+	font-size: 11px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+article {
+	text-shadow: 3px 3px 3px #aaaaaa;
+}
+
+
+.navigation {
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  width: 100%;
+  top: 0;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-links ul li {
+  justify-content: space-around;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
+  color: #fff;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: space-between;
+  width: 30px;
+  height: 30px;
+  top: 0.75rem;
+  right: 1rem;
+}
+
+.menu .bar {
+  background: #fff;
+  border-radius: 10px;
+  height: 3px;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .menu {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links ul li {
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.footer {
+  background: #111;
+  padding: 0 0 30px;
+}
+
+
+
+
+input[type="submit"] {
+	background: #6FA4F8;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 10px;
+	border: 0px;
+}
+
+input[type="submit"]:hover {
+	background: #2976f8;
+	color: #EEEEEE;
+	cursor: pointer;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+	width: 250px;
+	border-radius: 5px;
+	border: 1px solid #aaaaaa;
+	padding: 0.3em;
+}
+
+input[type="submit"] {
+	padding: 10px 25px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+textarea {
+	border-radius: 5px;
+	border: 1px solid #aaaaaa;
+	width: 483px;
+	height: 90px;
+}
+
+
+
+
